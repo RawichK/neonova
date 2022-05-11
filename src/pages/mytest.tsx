@@ -2,11 +2,16 @@ import Head from 'next/head';
 import React from 'react';
 import { ApplicationPage } from '@application';
 import { Button } from 'antd';
+import { useWallet } from '@rentfuse-labs/neo-wallet-adapter-react';
 
 export default function MyTestPage() {
-	const Click = () => {
-		alert('Clicked');
+	const { address, connected, invoke, invokeMulti } = useWallet();
+
+	const Click = async () => {
+		console.log(address);
+		console.log(connected);
 	};
+
 	return (
 		<>
 			<Head>

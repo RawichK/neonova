@@ -1,4 +1,11 @@
-import { CodeOutlined, ExportOutlined, FormOutlined, ImportOutlined, MehOutlined } from '@ant-design/icons';
+import {
+	CodeOutlined,
+	ExportOutlined,
+	FormOutlined,
+	ImportOutlined,
+	MehOutlined,
+	RobotOutlined,
+} from '@ant-design/icons';
 import { Application } from '@application';
 import { WalletModalProvider } from '@rentfuse-labs/neo-wallet-adapter-ant-design';
 import { WalletProvider } from '@rentfuse-labs/neo-wallet-adapter-react';
@@ -175,6 +182,7 @@ export default function _App({ Component, pageProps }: AppProps) {
 				),
 			},
 			{ url: '/contract', title: 'Contracts', icon: <FormOutlined /> },
+			{ url: '/mytest', title: 'MyTest', icon: <RobotOutlined /> },
 		];
 	}, [store]);
 
